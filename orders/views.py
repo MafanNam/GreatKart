@@ -59,7 +59,7 @@ def payments(request):
         product.save()
 
     # Clear cart
-    # CartItem.objects.filter(user=request.user).delete()
+    CartItem.objects.filter(user=request.user).delete()
 
     # Send order received email to customer
     mail_subject = 'Thank you for your order!'
